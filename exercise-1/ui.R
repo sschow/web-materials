@@ -1,6 +1,8 @@
 # ui.R
 library(shiny)
 library(plotly)
+library(shinythemes)
+shinyUI(navbarPage(theme = shinytheme("journal")))
 shinyUI(navbarPage(
   "Electoral College",
   # Create a tab panel for your map
@@ -12,7 +14,7 @@ shinyUI(navbarPage(
 
       # Side panel for controls
       sidebarPanel(
-
+        tags$h2("This is an interactive map"),
         # Input to select variable to map
         selectInput(
           "mapvar",
